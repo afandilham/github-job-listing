@@ -2,20 +2,25 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  // There are two point entries, index and fontawesome 
   entry: {
-    index: ['@babel/polyfill', './src/js/index.js']
+    index: ['@babel/polyfill', './src/js/index.js'],
+    fontawesome: ['@babel/polyfill/noConflict', './src/js/fontawesome.js']
   },
+  // Output  
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: 'js/[name].bundle.js'
   },
   plugins: [
+    // Using HtmlWebpackPlugin
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html'
     })
   ],
   module: {
+    // Three rules => js, css, and file 
     rules: [
       {
         test: /\.js$/,
@@ -52,7 +57,18 @@ module.exports = {
             loader: 'css-loader'
           }
         ]
+      },
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        exclude: '/node_modules',
+        use: ['file-loader']
       }
     ]
+  },
+  // Remove warning message in console
+  performance: { 
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
   }
 }

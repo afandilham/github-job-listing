@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400,500,600&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CUSTOM UTILITIES */
+.text-w-base {
+  font-weight: 600;
+}
+
+.header-webclip {
+  height: 91vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
+}
