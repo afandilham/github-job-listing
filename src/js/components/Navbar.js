@@ -11,7 +11,7 @@ class Navbar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <nav class="flex items-center justify-between flex-wrap bg-gray-900 p-6">
+    <nav class="flex items-center justify-between flex-wrap bg-gray-900 p-6 sticky top-0 z-10">
       <div class="flex items-center  text-white mr-6 ml-8">
         <i class="fab fa-github fa-2x"></i>
       </div>
