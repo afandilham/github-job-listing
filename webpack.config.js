@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   // There are two point entries, index and fontawesome 
   entry: {
-    index: ['@babel/polyfill', './src/js/index.js'],
-    fontawesome: ['@babel/polyfill/noConflict', './src/js/fontawesome.js']
+    fontawesome: ['@babel/polyfill/noConflict', './src/js/fontawesome.js'],
+    index: ['@babel/polyfill', './src/js/index.js']
   },
   // Output  
   output: {
