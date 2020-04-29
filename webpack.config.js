@@ -59,7 +59,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        test: /\.(svg|eot|woff|woff2|ttf|png|svg|jpg|gif)$/,
         exclude: '/node_modules',
         use: ['file-loader']
       }

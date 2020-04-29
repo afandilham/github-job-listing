@@ -9,11 +9,15 @@ html {
 }
 
 /* CUSTOM UTILITIES */
+.text-w-regular {
+  font-weight: 400;
+}
+
 .text-w-base {
+  font-weight: 500;
+}
+
+.text-w-bold {
   font-weight: 600;
 }
 
-.header-webclip {
-  height: 91vh;
-  clip-path: polygon(0 0, 100% 0%, 100% 79%, 0% 100%);
-}
