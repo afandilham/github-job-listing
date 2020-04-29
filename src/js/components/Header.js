@@ -25,7 +25,7 @@ class Header extends HTMLElement {
 
         .header-image .hero-image 
       </style>
-      <div class="bg-teal-400 header-webclip flex justify-start items-start md:items-center relative mb-0 md:-mt-20 md:mb-20">
+      <div class="bg-teal-400 header-webclip flex justify-start items-start md:items-center relative mt-0 mb-0 md:-mt-20 md:mb-20">
         <div class="w-4/5 mx-12 mt-12 lg:mt-0 md:mt-8 sm:mt-12">
           <h1 class="text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-w-bold">Github Job Listing</h1>
           <p class="w-full sm:w-4/5 md:w-2/3 lg:w-2/3 xl:lg:w-1/3 text-base xl:text-lg lg:text-lg md:text-base text-w-regular mt-2 mb-8">Aplikasi ini digunakan untuk mencari lowongan pekerjaan yang terdapat pada Github Jobs. Untuk menggunakannya, cukup dengan mengisi deskripsi pekerjaan serta lokasi di kolom form.</p>
