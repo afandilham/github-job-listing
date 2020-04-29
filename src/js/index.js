@@ -16,3 +16,12 @@ const listMenu = document.getElementById('list-menu');
 hamburger.addEventListener('click', ()=> {
   listMenu.classList.toggle('hidden');
 });
+
+// Protect image download
+const header = document.querySelector('..hero-image');
+        
+header.addEventListener('mousedown', (e) => {
+  if(e.button === 2) {
+    return false;
+  }
+});

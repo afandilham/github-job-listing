@@ -21,9 +21,8 @@ class Header extends HTMLElement {
         .header-image .hero-image {
           background: url('../img/hero.png');
           width: 50%;
+          pointer-events: none;
         }
-
-        .header-image .hero-image 
       </style>
       <div class="bg-teal-400 header-webclip flex justify-start items-start md:items-center relative -mt-0 mb-0 md:-mt-20 md:mb-20">
         <div class="w-4/5 mx-12 mt-12 lg:mt-0 md:mt-8 sm:mt-12">
