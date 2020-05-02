@@ -1,7 +1,7 @@
 // Components
 import './components/Navbar';
 import './components/Header';
-import './components/Biodata';
+import './components/About';
 
 // Styles / CSS
 import '../styles/style.css';
