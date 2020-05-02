@@ -8,6 +8,7 @@ import '../styles/style.css';
 
 // Image
 import hero from "../img/hero.png";
+import profile from "../img/profile.jpg";
 
 // Hamburder navbar
 const hamburger = document.getElementById('navbar-button');
