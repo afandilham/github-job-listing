@@ -33,4 +33,4 @@ class Biodata extends HTMLElement {
   }
 }
 
-customElements.define('about-section', Biodata);
+customElements.define('bio-section', Biodata);
