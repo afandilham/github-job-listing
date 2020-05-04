@@ -1,28 +1,54 @@
-// Components
+// Components import
 import './components/Navbar';
 import './components/Header';
 import './components/About';
 
-// Styles / CSS
+// CSS import
 import '../styles/style.css';
 
-// Image
+// Image import
 import hero from "../img/hero.png";
 import profile from "../img/profile.jpg";
 
-// Hamburder navbar
-const hamburger = document.getElementById('navbar-button');
-const listMenu = document.getElementById('list-menu');
+// MVC import
+import JobLists from "./models/JobLists";
+import * as jobsView from "./views/JobListsView";
+import { elements } from "./views/base";
 
-hamburger.addEventListener('click', ()=> {
-  listMenu.classList.toggle('hidden');
-});
+/**
+ * JobLists controller
+ * */ 
 
-// Protect image download
-const header = document.querySelector('..hero-image');
-        
-header.addEventListener('mousedown', (e) => {
-  if(e.button === 2) {
-    return false;
+// Global state
+const state = {};
+
+const JobsListsController = async () => {
+  // Get description and location values from input
+  const queryDescription = jobsView.inputDescription();
+  const queryLocation = jobsView.inputLocation();
+  
+  if (queryDescription && queryLocation) {
+    state.search = new JobLists(queryDescription, queryLocation);
+    
+    // Clear input and content for prepare
+    jobsView.clearInput();
+    jobsView.clearContent();
+    try {
+      // Search for jobs
+      await state.search.getJobs();
+
+      // Render results on View
+      jobsView.renderJobs(state.search.result);
+    } catch (error) {
+      console.error(error);
+    }
   }
+} 
+
+elements.searchForm.addEventListener('submit', e => {
+  e.preventDefault();
+  JobsListsController();
 });
+
+// ==================================
+
