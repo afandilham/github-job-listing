@@ -8,7 +8,11 @@ html {
   scroll-behavior: smooth;
 }
 
-/* CUSTOM UTILITIES */
+#app {
+  display: none;
+}
+
+/* CUSTOM UTILITIES AND STYLING */
 .text-w-regular {
   font-weight: 400;
 }
@@ -19,5 +23,14 @@ html {
 
 .text-w-bold {
   font-weight: 600;
+}
+
+.windowLoader svg,
+.findLoader svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 20%;
 }
 

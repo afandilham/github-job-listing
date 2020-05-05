@@ -9,7 +9,7 @@ export default class JobLists {
 
   async getJobs() {
     try {
-      const response = await axios.get(`${proxy}https://jobs.github.com/positions.json?`, {
+      const response = await axios.get(`${proxy}https://jobs.github.com/positions.json`, {
         params: {
           description: this.description,
           location: this.location

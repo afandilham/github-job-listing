@@ -7,10 +7,10 @@ module.exports = {
     fontawesome: ['@babel/polyfill/noConflict', './src/js/fontawesome.js'],
     index: ['@babel/polyfill', './src/js/index.js']
   },
-  // Output  
+  // Output js
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: 'js/[name].bundle.js'
+    filename: 'assets/js/[name].bundle.js'
   },
   plugins: [
     // Using HtmlWebpackPlugin
@@ -59,9 +59,14 @@ module.exports = {
         ]
       },
       {
-        test: /\.(svg|eot|woff|woff2|ttf|png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif)$/,
         exclude: '/node_modules',
-        use: ['file-loader']
+        use: {
+          loader: 'file-loader',
+          options: {
+            outputPath: '/assets/img'
+          }
+        }
       }
     ]
   },
