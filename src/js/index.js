@@ -55,6 +55,10 @@ elements.searchForm.addEventListener('submit', e => {
   JobsListsController();
 });
 
+// Set to DOM
+document.querySelector('.hero-image').src = hero;
+document.querySelector('.profile-image').src = profile;
+
 // Animate On Scroll
 AOS.init();
 

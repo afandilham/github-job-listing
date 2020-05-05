@@ -59,14 +59,16 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        exclude: '/node_modules',
-        use: {
-          loader: 'file-loader',
-          options: {
-            outputPath: 'assets/img'
+        test: /\.(png|jpg|gif|svg)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              encoding: true,
+              outputPath: 'assets/img'
+            }
           }
-        }
+        ]
       }
     ]
   },
