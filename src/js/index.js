@@ -60,12 +60,14 @@ var callback = function(){
   document.getElementById('app').style.display = 'block';
 };
 
-if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
-  callback();
-} else if(document.readyStat === "loading") {
-  renderWindowLoader(elements.app);
-} else {
-  document.addEventListener("DOMContentLoaded", callback);
+document.onreadystatechange = () => {
+  if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
+    callback();
+  } else if(document.readyState === "loading") {
+    renderWindowLoader(elements.app);
+  } else {
+    document.addEventListener("DOMContentLoaded", callback);
+  }
 }
 
 
