@@ -44,11 +44,12 @@ const JobsListsController = async () => {
       // Render results on View
       clearFindLoader();
       jobsView.renderJobs(state.search.result);
+      
     } catch (error) {
       console.error(error);
     }
   }
-} 
+}
 
 elements.searchForm.addEventListener('submit', e => {
   e.preventDefault();
