@@ -12,7 +12,7 @@ import profile from "../img/profile.jpg";
 
 import JobLists from "./models/JobLists";
 import * as jobsView from "./views/JobListsView";
-import { elements, renderFindLoader, clearFindLoader, renderWindowLoader } from "./views/base";
+import { elements, renderFindLoader, clearFindLoader } from "./views/base";
 
 // Animate On Scroll
 import AOS from 'aos';
@@ -54,22 +54,6 @@ elements.searchForm.addEventListener('submit', e => {
   e.preventDefault();
   JobsListsController();
 });
-
-// Loading page
-var callback = function(){
-  document.getElementById('app').style.display = 'block';
-};
-
-document.onreadystatechange = () => {
-  if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
-    callback();
-  } else if(document.readyState === "loading") {
-    renderWindowLoader(elements.app);
-  } else {
-    document.addEventListener("DOMContentLoaded", callback);
-  }
-}
-
 
 // Animate On Scroll
 AOS.init();

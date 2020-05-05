@@ -8,10 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-#app {
-  display: none;
-}
-
 /* CUSTOM UTILITIES AND STYLING */
 .text-w-regular {
   font-weight: 400;
@@ -25,7 +21,6 @@ html {
   font-weight: 600;
 }
 
-.windowLoader svg,
 .findLoader svg {
   display: flex;
   justify-content: center;
