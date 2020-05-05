@@ -32,7 +32,7 @@ class Header extends HTMLElement {
           </a>
         </div>
         <div class="w-1/3 flex header-image header-clip flex justify-end mr-8 hidden lg:flex" data-aos="fade-left" data-aos-duration="900">
-          <img class="hero-image" src="/dist/assets/img/a862b33c99fe6c58bd3aa8c3fb2be124.png" alt="">
+          <img class="hero-image" src="./assets/img/a862b33c99fe6c58bd3aa8c3fb2be124.png" alt="">
         </div>
       </div>
     `;
