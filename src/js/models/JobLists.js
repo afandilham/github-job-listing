@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { proxy } from '../config';
 
 export default class JobLists {
@@ -9,14 +8,9 @@ export default class JobLists {
 
   async getJobs() {
     try {
-      const response = await axios.get(`${proxy}https://jobs.github.com/positions.json`, {
-        params: {
-          description: this.description,
-          location: this.location
-        }
-      });
-      console.log(response.data);
-      this.result = response.data;
+      const response = await fetch(`${proxy}https://jobs.github.com/positions.json?description=${this.description}&location=${this.location}`);
+      const responseJson = await response.json();
+      this.result = responseJson;
     } catch (error) {
       console.log(error);
     }

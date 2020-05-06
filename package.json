@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development"
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --config webpack.dev.js"
   },
   "keywords": [
     "javascript"
@@ -19,18 +18,19 @@
     "@babel/preset-env": "^7.9.5",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.2.0",
     "style-loader": "^1.2.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
     "@fortawesome/fontawesome-free": "^5.13.0",
-    "aos": "^3.0.0-beta.6",
-    "axios": "^0.19.2"
+    "aos": "^3.0.0-beta.6"
   }
 }
