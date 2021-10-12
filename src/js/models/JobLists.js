@@ -8,7 +8,7 @@ export default class JobLists {
 
   async getJobs() {
     try {
-      const response = await fetch(`${proxy}https://jobs.github.com/positions.json?description=${this.description}&location=${this.location}`);
+      const response = await fetch(`https://jobs.github.com/positions.json?description=${this.description}&location=${this.location}`);
       const responseJson = await response.json();
       this.result = responseJson;
     } catch (error) {
